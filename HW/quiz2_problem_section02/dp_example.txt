@@ -1,0 +1,744 @@
+// This is an example executed with the _DEBUG macro enabled.
+
+duration = 60
+0) Thinking
+	1) Thinking
+		2) Thinking
+			3) Thinking
+				4) Thinking
+	PickUp(1)
+	Test(1)
+	Test(1) - done.
+	PickUp(1) - done.
+	1) Eating
+				PickUp(4)
+				Test(4)
+				Test(4) - done.
+				PickUp(4) - done.
+				4) Eating
+	PutDown(1)
+	Test(0)
+	Test(0) - done.
+	Test(2)
+	Test(2) - done.
+	PutDown(1) - done.
+	1) Thinking
+PickUp(0)
+Test(0)
+Test(0) - done.
+			PickUp(3)
+			Test(3)
+			Test(3) - done.			// PickUp(3) waits because Philosopher #2 and #4 are eating.
+		PickUp(2)
+		Test(2)
+		Test(2) - done.
+		PickUp(2) - done.
+		2) Eating
+				PutDown(4)
+				Test(3)
+	PickUp(1)
+				Test(3) - done.
+				Test(0)
+				Test(0) - done.
+	Test(1)
+	Test(1) - done.					// PickUp(1) is waiting because Philosopher #2 is eating
+PickUp(0) - done.
+0) Eating
+				PutDown(4) - done.
+				4) Thinking
+		PutDown(2)
+		Test(1)
+		Test(1) - done.
+		Test(3)
+		Test(3) - done.
+		PutDown(2) - done.
+		2) Thinking
+			PickUp(3) - done.		// PickUp(3) resumed because Philosopher #2 and #4 finished eating
+			3) Eating
+PutDown(0)
+Test(4)
+Test(4) - done.
+Test(1)
+Test(1) - done.
+PutDown(0) - done.
+0) Thinking
+	PickUp(1) - done.				// PichUp(1) resumed because Philosopher #0 and #2 finished eating
+	1) Eating
+			PutDown(3)
+			Test(2)
+			Test(2) - done.
+			Test(4)
+			Test(4) - done.
+			PutDown(3) - done.
+			3) Thinking
+				PickUp(4)
+				Test(4)
+				Test(4) - done.
+				PickUp(4) - done.
+				4) Eating
+		PickUp(2)
+		Test(2)
+		Test(2) - done.
+				PutDown(4)
+				Test(3)
+				Test(3) - done.
+				Test(0)
+				Test(0) - done.
+				PutDown(4) - done.
+				4) Thinking
+	PutDown(1)
+	Test(0)
+	Test(0) - done.
+	Test(2)
+	Test(2) - done.
+	PutDown(1) - done.
+	1) Thinking
+PickUp(0)
+Test(0)
+Test(0) - done.
+PickUp(0) - done.
+0) Eating
+		PickUp(2) - done.
+		2) Eating
+			PickUp(3)
+			Test(3)
+			Test(3) - done.
+				PickUp(4)
+				Test(4)
+				Test(4) - done.
+PutDown(0)
+Test(4)
+Test(4) - done.
+Test(1)
+Test(1) - done.
+PutDown(0) - done.
+0) Thinking
+	PickUp(1)
+	Test(1)
+	Test(1) - done.
+				PickUp(4) - done.
+				4) Eating
+		PutDown(2)
+		Test(1)
+		Test(1) - done.
+		Test(3)
+		Test(3) - done.
+	PickUp(1) - done.
+	1) Eating
+		PutDown(2) - done.
+		2) Thinking
+				PutDown(4)
+				Test(3)
+				Test(3) - done.
+				Test(0)
+				Test(0) - done.
+			PickUp(3) - done.
+			3) Eating
+				PutDown(4) - done.
+				4) Thinking
+PickUp(0)
+Test(0)
+Test(0) - done.
+		PickUp(2)
+		Test(2)
+		Test(2) - done.
+	PutDown(1)
+	Test(0)
+	Test(0) - done.
+	Test(2)
+	Test(2) - done.
+	PutDown(1) - done.
+	1) Thinking
+PickUp(0) - done.
+0) Eating
+			PutDown(3)
+			Test(2)
+			Test(2) - done.
+			Test(4)
+			Test(4) - done.
+			PutDown(3) - done.
+			3) Thinking
+		PickUp(2) - done.
+		2) Eating
+				PickUp(4)
+				Test(4)
+				Test(4) - done.
+PutDown(0)
+Test(4)
+Test(4) - done.
+Test(1)
+Test(1) - done.
+PutDown(0) - done.
+0) Thinking
+				PickUp(4) - done.
+				4) Eating
+		PutDown(2)
+		Test(1)
+		Test(1) - done.
+		Test(3)
+		Test(3) - done.
+		PutDown(2) - done.
+		2) Thinking
+				PutDown(4)
+				Test(3)
+				Test(3) - done.
+				Test(0)
+				Test(0) - done.
+				PutDown(4) - done.
+				4) Thinking
+	PickUp(1)
+	Test(1)
+	Test(1) - done.
+	PickUp(1) - done.
+	1) Eating
+			PickUp(3)
+			Test(3)
+			Test(3) - done.
+			PickUp(3) - done.
+			3) Eating
+PickUp(0)
+Test(0)
+Test(0) - done.
+		PickUp(2)
+		Test(2)
+		Test(2) - done.
+				PickUp(4)
+				Test(4)
+				Test(4) - done.
+	PutDown(1)
+	Test(0)
+	Test(0) - done.
+	Test(2)
+	Test(2) - done.
+	PutDown(1) - done.
+	1) Thinking
+PickUp(0) - done.
+0) Eating
+			PutDown(3)
+			Test(2)
+			Test(2) - done.
+			Test(4)
+			Test(4) - done.
+			PutDown(3) - done.
+			3) Thinking
+		PickUp(2) - done.
+		2) Eating
+PutDown(0)
+Test(4)
+Test(4) - done.
+Test(1)
+Test(1) - done.
+PutDown(0) - done.
+0) Thinking
+		PutDown(2)
+		Test(1)
+		Test(1) - done.
+		Test(3)
+		Test(3) - done.
+		PutDown(2) - done.
+		2) Thinking
+				PickUp(4) - done.
+				4) Eating
+	PickUp(1)
+	Test(1)
+	Test(1) - done.
+	PickUp(1) - done.
+	1) Eating
+				PutDown(4)
+				Test(3)
+				Test(3) - done.
+				Test(0)
+				Test(0) - done.
+				PutDown(4) - done.
+				4) Thinking
+	PutDown(1)
+	Test(0)
+	Test(0) - done.
+	Test(2)
+	Test(2) - done.
+	PutDown(1) - done.
+	1) Thinking
+			PickUp(3)
+			Test(3)
+			Test(3) - done.
+			PickUp(3) - done.
+			3) Eating
+				PickUp(4)
+				Test(4)
+				Test(4) - done.
+PickUp(0)
+Test(0)
+Test(0) - done.
+PickUp(0) - done.
+0) Eating
+		PickUp(2)
+		Test(2)
+		Test(2) - done.
+			PutDown(3)
+			Test(2)
+			Test(2) - done.
+			Test(4)
+			Test(4) - done.
+			PutDown(3) - done.
+			3) Thinking
+		PickUp(2) - done.
+		2) Eating
+PutDown(0)
+Test(4)
+Test(4) - done.
+Test(1)
+Test(1) - done.
+PutDown(0) - done.
+0) Thinking
+	PickUp(1)
+	Test(1)
+	Test(1) - done.
+				PickUp(4) - done.
+				4) Eating
+			PickUp(3)
+			Test(3)
+			Test(3) - done.
+		PutDown(2)
+		Test(1)
+		Test(1) - done.
+		Test(3)
+		Test(3) - done.
+		PutDown(2) - done.
+		2) Thinking
+	PickUp(1) - done.
+	1) Eating
+PickUp(0)
+Test(0)
+Test(0) - done.
+	PutDown(1)
+	Test(0)
+	Test(0) - done.
+	Test(2)
+	Test(2) - done.
+	PutDown(1) - done.
+	1) Thinking
+		PickUp(2)
+		Test(2)
+		Test(2) - done.
+		PickUp(2) - done.
+		2) Eating
+				PutDown(4)
+				Test(3)
+				Test(3) - done.
+				Test(0)
+				Test(0) - done.
+				PutDown(4) - done.
+				4) Thinking
+PickUp(0) - done.
+0) Eating
+PutDown(0)
+Test(4)
+Test(4) - done.
+Test(1)
+Test(1) - done.
+PutDown(0) - done.
+0) Thinking
+	PickUp(1)
+	Test(1)
+	Test(1) - done.
+		PutDown(2)
+		Test(1)
+		Test(1) - done.
+		Test(3)
+		Test(3) - done.
+		PutDown(2) - done.
+		2) Thinking
+	PickUp(1) - done.
+	1) Eating
+			PickUp(3) - done.
+			3) Eating
+				PickUp(4)
+				Test(4)
+				Test(4) - done.
+PickUp(0)
+Test(0)
+Test(0) - done.
+	PutDown(1)
+	Test(0)
+	Test(0) - done.
+	Test(2)
+	Test(2) - done.
+	PutDown(1) - done.
+	1) Thinking
+PickUp(0) - done.
+0) Eating
+			PutDown(3)
+			Test(2)
+			Test(2) - done.
+			Test(4)
+			Test(4) - done.
+			PutDown(3) - done.
+			3) Thinking
+	PickUp(1)
+	Test(1)
+	Test(1) - done.
+		PickUp(2)
+		Test(2)
+		Test(2) - done.
+		PickUp(2) - done.
+		2) Eating
+PutDown(0)
+Test(4)
+Test(4) - done.
+Test(1)
+Test(1) - done.
+PutDown(0) - done.
+0) Thinking
+				PickUp(4) - done.
+				4) Eating
+PickUp(0)
+Test(0)
+Test(0) - done.
+			PickUp(3)
+			Test(3)
+			Test(3) - done.
+				PutDown(4)
+				Test(3)
+				Test(3) - done.
+				Test(0)
+				Test(0) - done.
+				PutDown(4) - done.
+				4) Thinking
+PickUp(0) - done.
+0) Eating
+		PutDown(2)
+		Test(1)
+		Test(1) - done.
+		Test(3)
+		Test(3) - done.
+		PutDown(2) - done.
+		2) Thinking
+			PickUp(3) - done.
+			3) Eating
+PutDown(0)
+Test(4)
+Test(4) - done.
+Test(1)
+Test(1) - done.
+PutDown(0) - done.
+0) Thinking
+	PickUp(1) - done.
+	1) Eating
+		PickUp(2)
+		Test(2)
+		Test(2) - done.
+PickUp(0)
+Test(0)
+Test(0) - done.
+			PutDown(3)
+			Test(2)
+			Test(2) - done.
+			Test(4)
+			Test(4) - done.
+			PutDown(3) - done.
+			3) Thinking
+				PickUp(4)
+				Test(4)
+				Test(4) - done.
+				PickUp(4) - done.
+				4) Eating
+	PutDown(1)
+	Test(0)
+	Test(0) - done.
+	Test(2)
+	Test(2) - done.
+	PutDown(1) - done.
+	1) Thinking
+		PickUp(2) - done.
+		2) Eating
+			PickUp(3)
+			Test(3)
+			Test(3) - done.
+	PickUp(1)
+	Test(1)
+	Test(1) - done.
+				PutDown(4)
+				Test(3)
+				Test(3) - done.
+				Test(0)
+				Test(0) - done.
+				PutDown(4) - done.
+				4) Thinking
+PickUp(0) - done.
+0) Eating
+		PutDown(2)
+		Test(1)
+		Test(1) - done.
+		Test(3)
+		Test(3) - done.
+		PutDown(2) - done.
+		2) Thinking
+			PickUp(3) - done.
+			3) Eating
+PutDown(0)
+Test(4)
+Test(4) - done.
+Test(1)
+Test(1) - done.
+PutDown(0) - done.
+0) Thinking
+	PickUp(1) - done.
+	1) Eating
+		PickUp(2)
+		Test(2)
+		Test(2) - done.
+				PickUp(4)
+				Test(4)
+				Test(4) - done.
+			PutDown(3)
+			Test(2)
+			Test(2) - done.
+			Test(4)
+			Test(4) - done.
+			PutDown(3) - done.
+			3) Thinking
+PickUp(0)
+Test(0)
+Test(0) - done.
+				PickUp(4) - done.
+				4) Eating
+	PutDown(1)
+	Test(0)
+	Test(0) - done.
+	Test(2)
+	Test(2) - done.
+	PutDown(1) - done.
+	1) Thinking
+		PickUp(2) - done.
+		2) Eating
+		PutDown(2)
+		Test(1)
+		Test(1) - done.
+		Test(3)
+		Test(3) - done.
+		PutDown(2) - done.
+		2) Thinking
+			PickUp(3)
+			Test(3)
+			Test(3) - done.
+				PutDown(4)
+				Test(3)
+				Test(3) - done.
+				Test(0)
+				Test(0) - done.
+				PutDown(4) - done.
+				4) Thinking
+	PickUp(1)
+	Test(1)
+	Test(1) - done.
+PickUp(0) - done.
+0) Eating
+			PickUp(3) - done.
+			3) Eating
+		PickUp(2)
+		Test(2)
+		Test(2) - done.
+PutDown(0)
+Test(4)
+Test(4) - done.
+Test(1)
+Test(1) - done.
+PutDown(0) - done.
+0) Thinking
+	PickUp(1) - done.
+	1) Eating
+			PutDown(3)
+			Test(2)
+			Test(2) - done.
+			Test(4)
+			Test(4) - done.
+			PutDown(3) - done.
+			3) Thinking
+				PickUp(4)
+				Test(4)
+				Test(4) - done.
+				PickUp(4) - done.
+				4) Eating
+	PutDown(1)
+	Test(0)
+	Test(0) - done.
+	Test(2)
+	Test(2) - done.
+	PutDown(1) - done.
+	1) Thinking
+		PickUp(2) - done.
+		2) Eating
+PickUp(0)
+Test(0)
+Test(0) - done.
+				PutDown(4)
+				Test(3)
+				Test(3) - done.
+				Test(0)
+				Test(0) - done.
+				PutDown(4) - done.
+				4) Thinking
+PickUp(0) - done.
+0) Eating
+			PickUp(3)
+			Test(3)
+			Test(3) - done.
+	PickUp(1)
+	Test(1)
+	Test(1) - done.
+		PutDown(2)
+		Test(1)
+		Test(1) - done.
+		Test(3)
+		Test(3) - done.
+		PutDown(2) - done.
+		2) Thinking
+PutDown(0)
+Test(4)
+Test(4) - done.
+Test(1)
+Test(1) - done.
+PutDown(0) - done.
+0) Thinking
+	PickUp(1) - done.
+	1) Eating
+			PickUp(3) - done.
+			3) Eating
+				PickUp(4)
+				Test(4)
+				Test(4) - done.
+		PickUp(2)
+		Test(2)
+		Test(2) - done.
+	PutDown(1)
+	Test(0)
+	Test(0) - done.
+	Test(2)
+	Test(2) - done.
+	PutDown(1) - done.
+	1) Thinking
+			PutDown(3)
+			Test(2)
+			Test(2) - done.
+			Test(4)
+			Test(4) - done.
+			PutDown(3) - done.
+			3) Thinking
+		PickUp(2) - done.
+		2) Eating
+				PickUp(4) - done.
+				4) Eating
+PickUp(0)
+Test(0)
+Test(0) - done.
+	PickUp(1)
+	Test(1)
+	Test(1) - done.
+			PickUp(3)
+			Test(3)
+			Test(3) - done.
+				PutDown(4)
+				Test(3)
+				Test(3) - done.
+				Test(0)
+				Test(0) - done.
+				PutDown(4) - done.
+				4) Thinking
+PickUp(0) - done.
+0) Eating
+		PutDown(2)
+		Test(1)
+		Test(1) - done.
+		Test(3)
+		Test(3) - done.
+		PutDown(2) - done.
+		2) Thinking
+			PickUp(3) - done.
+			3) Eating
+				PickUp(4)
+				Test(4)
+				Test(4) - done.
+PutDown(0)
+Test(4)
+Test(4) - done.
+Test(1)
+Test(1) - done.
+PutDown(0) - done.
+0) Thinking
+	PickUp(1) - done.
+	1) Eating
+		PickUp(2)
+		Test(2)
+		Test(2) - done.
+			PutDown(3)
+			Test(2)
+			Test(2) - done.
+			Test(4)
+			Test(4) - done.
+			PutDown(3) - done.
+			3) Thinking
+				PickUp(4) - done.
+				4) Eating
+	PutDown(1)
+	Test(0)
+	Test(0) - done.
+	Test(2)
+	Test(2) - done.
+	PutDown(1) - done.
+	1) Thinking
+		PickUp(2) - done.
+		2) Eating
+			PickUp(3)
+			Test(3)
+			Test(3) - done.
+PickUp(0)
+Test(0)
+Test(0) - done.
+	PickUp(1)
+	Test(1)
+	Test(1) - done.
+Terminating threads 
+PickUp(0) - done.
+0) Eating
+Waiting for threads 
+	PickUp(1) - done.
+	1) Eating
+			PickUp(3) - done.
+			3) Eating
+		PutDown(2)
+		Test(1)
+		Test(1) - done.
+		Test(3)
+		Test(3) - done.
+		PutDown(2) - done.
+		2) Terminating
+	PutDown(1)
+	Test(0)
+	Test(0) - done.
+	Test(2)
+	Test(2) - done.
+	PutDown(1) - done.
+	1) Terminating
+			PutDown(3)
+			Test(2)
+			Test(2) - done.
+			Test(4)
+			Test(4) - done.
+			PutDown(3) - done.
+			3) Terminating
+				PutDown(4)
+				Test(3)
+				Test(3) - done.
+				Test(0)
+				Test(0) - done.
+				PutDown(4) - done.
+				4) Terminating
+PutDown(0)
+Test(4)
+Test(4) - done.
+Test(1)
+Test(1) - done.
+PutDown(0) - done.
+0) Terminating
+Destroying dp...
+Bye!
